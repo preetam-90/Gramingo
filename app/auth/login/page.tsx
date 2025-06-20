@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tractor, Eye, EyeOff, Mail, Lock, AlertCircle } from "lucide-react"
-import { AuthClient } from "@/lib/auth"
+import { signIn } from "next-auth/react"
 
 export default function LoginPage() {
   const router = useRouter()
@@ -25,7 +25,6 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
-  const [availableRoles, setAvailableRoles] = useState<string[]>([])
 
   // Check for demo mode
   const isDemo = searchParams.get("demo") === "google"
@@ -36,38 +35,21 @@ export default function LoginPage() {
     setError("")
 
     try {
-      const response = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+      const result = await signIn("credentials", {
+        email: formData.email,
+        password: formData.password,
+        redirect: false,
+        callbackUrl: "/",
       })
 
-      const data = await response.json()
-
-      if (response.ok) {
-        // Store auth data
-        AuthClient.setAuth(data.user, data.accessToken)
-
-        // Store available roles for future use
-        if (data.availableRoles) {
-          setAvailableRoles(data.availableRoles)
-        }
-
-        // Force redirect based on user role
-        const redirectPath = data.user.role === "admin" ? "/admin" : data.user.role === "owner" ? "/owner" : "/farmer"
-
-        console.log("Redirecting to:", redirectPath)
-
-        // Use window.location for immediate redirect
-        window.location.href = redirectPath
+      if (result?.error) {
+        setError(result.error ?? "Invalid credentials")
       } else {
-        setError(data.error || "Login failed")
+        router.push("/")
       }
-    } catch (error) {
-      console.error("Login error:", error)
-      setError("Network error. Please try again.")
+    } catch (err) {
+      console.error(err)
+      setError("Something went wrong")
     } finally {
       setIsLoading(false)
     }
@@ -82,29 +64,7 @@ export default function LoginPage() {
   }
 
   const handleGoogleLogin = () => {
-    // For demo, simulate Google login
-    const demoUser = {
-      id: "google_demo",
-      name: "Demo Google User",
-      email: "demo@google.com",
-      role: "farmer" as const,
-      avatar: "/placeholder.svg?height=32&width=32",
-      provider: "google" as const,
-      isVerified: true,
-      createdAt: new Date(),
-    }
-
-    const demoToken = btoa(
-      JSON.stringify({
-        userId: demoUser.id,
-        email: demoUser.email,
-        role: demoUser.role,
-        exp: Date.now() + 7 * 24 * 60 * 60 * 1000,
-      }),
-    )
-
-    AuthClient.setAuth(demoUser, demoToken)
-    window.location.href = "/farmer"
+    signIn("google", { callbackUrl: "/" })
   }
 
   return (
