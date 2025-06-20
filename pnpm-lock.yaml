@@ -186,6 +186,9 @@ importers:
       '@types/react':
         specifier: ^19
         version: 19.0.0
+      '@types/react-day-picker':
+        specifier: ^5.3.0
+        version: 5.3.0(react@19.0.0)
       '@types/react-dom':
         specifier: ^19
         version: 19.0.0
@@ -1389,6 +1392,10 @@ packages:
 
   '@types/node@22.0.0':
     resolution: {integrity: sha512-VT7KSYudcPOzP5Q0wfbowyNLaVR8QWUdw+088uFWwfvpY6uCWaXpqV6ieLAu9WBcnTa7H4Z5RLK8I5t2FuOcqw==}
+
+  '@types/react-day-picker@5.3.0':
+    resolution: {integrity: sha512-iMMXQjwTH8uxPTW3WYP6ZufZBSMFFEScGIztENtKfvukefrojmX/WCUNPrimC9ys1ll5nnM0VGaHolYLAbcEtw==}
+    deprecated: This is a stub types definition for react-day-picker (https://github.com/gpbl/react-day-picker). react-day-picker provides its own type definitions, so you don't need @types/react-day-picker installed!
 
   '@types/react-dom@19.0.0':
     resolution: {integrity: sha512-1KfiQKsH1o00p9m5ag12axHQSb3FOU9H20UTrujVSkNhuCrRHiQWFqgEnTNK5ZNfnzZv8UWrnXVqCmCF9fgY3w==}
@@ -3573,6 +3580,12 @@ snapshots:
   '@types/node@22.0.0':
     dependencies:
       undici-types: 6.11.1
+
+  '@types/react-day-picker@5.3.0(react@19.0.0)':
+    dependencies:
+      react-day-picker: 9.7.0(react@19.0.0)
+    transitivePeerDependencies:
+      - react
 
   '@types/react-dom@19.0.0':
     dependencies:
