@@ -51,3 +51,15 @@ export class AuthClient {
     return !!this.getStoredToken() && !!this.getStoredUser()
   }
 }
+
+import { getServerSession } from "next-auth/next"
+import { authOptions } from "@/app/api/auth/[...nextauth]/route"
+
+export async function getServerAuthSession() {
+  return await getServerSession(authOptions)
+}
+
+export async function currentUser() {
+  const session = await getServerAuthSession()
+  return session?.user ?? null
+}
