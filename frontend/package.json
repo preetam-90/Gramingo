@@ -28,7 +28,6 @@
     "@types/react-calendar": "^3.4.5",
     "@vitejs/plugin-react": "^4.1.0",
     "@types/node": "^20.11.19",
-    "@types/react-i18next": "^8.1.0",
-    "@types/i18next": "^21.11.3"
+    "@types/react-i18next": "^8.1.0"
   }
 }
