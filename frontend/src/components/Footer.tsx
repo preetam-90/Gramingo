@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-glass-strong backdrop-blur-sm py-6 mt-16 shadow-glass">
+    <footer className="bg-glass-strong backdrop-blur-lg py-6 mt-16 shadow-glass-deep">
       <div className="mx-auto max-w-7xl flex flex-col items-center space-y-4 text-center">
         <nav className="space-x-4">
           <Link to="/" className="hover:underline">

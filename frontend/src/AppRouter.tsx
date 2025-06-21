@@ -16,7 +16,7 @@ const AppRouter: React.FC = () => {
 
   return (
     <Router>
-      <header className="backdrop-blur-sm bg-glass-strong sticky top-0 z-50 shadow-glass">
+      <header className="backdrop-blur-lg bg-glass-strong sticky top-0 z-50 shadow-glass-deep">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-4">
           <Link to="/" className="text-2xl font-bold text-primary">
             Gramin Go

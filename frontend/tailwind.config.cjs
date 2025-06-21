@@ -23,10 +23,13 @@ module.exports = {
       },
       boxShadow: {
         glass: '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+        'glass-deep': '0 16px 60px 0 rgba(31, 38, 135, 0.25)',
       },
       backdropBlur: {
         xs: '2px',
         sm: '4px',
+        md: '8px',
+        lg: '12px',
       },
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans],
