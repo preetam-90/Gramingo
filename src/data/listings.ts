@@ -1,13 +1,4 @@
-export interface Listing {
-  id: string;
-  name: string;
-  image: string;
-  pricePerHour: number;
-  location: string;
-  available: boolean;
-  category: string;
-  description: string;
-}
+import { Listing } from '../types';
 
 export const listings: Listing[] = [
   {
@@ -41,3 +32,5 @@ export const listings: Listing[] = [
     description: 'Compact tiller for small to medium farms.',
   },
 ];
+
+export type { Listing };

@@ -1,4 +1,4 @@
-export type Locale = 'en' | 'hi';
+import type { Locale } from './types';
 
 export const translations = {
   en: {

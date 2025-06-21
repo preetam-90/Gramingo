@@ -1,9 +1,4 @@
-export interface Booking {
-  listingId: string;
-  name: string;
-  contact: string;
-  date: Date;
-}
+import { Booking } from '../types';
 
 const STORAGE_KEY = 'gramin-go-bookings';
 
