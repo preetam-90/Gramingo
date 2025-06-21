@@ -60,7 +60,7 @@ const ListingDetailPage: React.FC = () => {
               />
               <DatePicker
                 selected={date}
-                onChange={(d) => setDate(d as Date)}
+                onChange={(d: Date | null) => setDate(d)}
                 minDate={new Date()}
                 placeholderText={t(locale, 'bookingDates')}
                 className="bg-transparent border border-white/30 px-3 py-2 rounded-md backdrop-blur-sm w-full"
