@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="mx-auto max-w-4xl px-4 space-y-6">
-      <h1 className="mt-8 text-3xl font-bold">About Us</h1>
+      <h1 className="mt-8 text-3xl font-bold">{t('aboutUs')}</h1>
       <p>
         Gramin Go is on a mission to empower farmers with convenient access to
         modern agricultural machinery. We bridge the gap between equipment

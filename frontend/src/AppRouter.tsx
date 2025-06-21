@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 
 const AppRouter: React.FC = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const toggleLang = () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'hi' : 'en');
@@ -16,20 +16,20 @@ const AppRouter: React.FC = () => {
 
   return (
     <Router>
-      <header className="backdrop-blur-xs bg-glass sticky top-0 z-50 shadow-md">
+      <header className="backdrop-blur-sm bg-glass-strong sticky top-0 z-50 shadow-glass">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-4">
           <Link to="/" className="text-2xl font-bold text-primary">
             Gramin Go
           </Link>
           <div className="space-x-4">
             <Link to="/browse" className="hover:underline">
-              Browse
+              {t('browse')}
             </Link>
             <Link to="/about" className="hover:underline">
-              About
+              {t('about')}
             </Link>
             <Link to="/contact" className="hover:underline">
-              Contact
+              {t('contact')}
             </Link>
             <button
               onClick={toggleLang}

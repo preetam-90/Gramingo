@@ -18,7 +18,7 @@ const ListingCard: React.FC<Props> = ({ item }) => {
         <h3 className="text-lg font-semibold">{item.name}</h3>
         <p className="text-sm text-secondary">{item.location}</p>
         <p className="text-sm">
-          ₹{item.pricePerDay.toLocaleString()} / day
+          ₹{item.pricePerDay.toLocaleString()} {t('perDay')}
         </p>
         <span
           className={`inline-block rounded-full px-2 py-0.5 text-xs ${

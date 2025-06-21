@@ -9,10 +9,10 @@
 
 /* Calendar Overrides */
 .react-calendar {
-  @apply bg-surface backdrop-blur-sm rounded-xl p-4 shadow-glass text-text-primary;
+  @apply w-full bg-surface backdrop-blur-sm rounded-xl p-4 shadow-glass text-text-primary;
 }
 .react-calendar__tile {
-  @apply h-10 w-10 flex items-center justify-center rounded-lg hover:bg-primary-light/30 transition-colors;
+  @apply h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center rounded-lg hover:bg-primary-light/30 transition-colors text-xs sm:text-sm;
 }
 .react-calendar__tile--active {
   @apply bg-primary-light text-white;

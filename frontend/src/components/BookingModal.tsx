@@ -18,7 +18,7 @@ const BookingModal: React.FC<Props> = ({ listing, onClose }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here we would send data to backend.
-    alert(`Booking confirmed for ${listing.name}!`);
+    alert(t('bookingConfirmed', { name: listing.name }));
     onClose();
   };
 
