@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tractor, Eye, EyeOff, Mail, Lock, User, AlertCircle, CheckCircle } from "lucide-react"
+import { signIn } from "next-auth/react"
 
 export default function RegisterPage() {
   const router = useRouter()
@@ -98,7 +99,7 @@ export default function RegisterPage() {
   }
 
   const handleGoogleSignup = () => {
-    window.location.href = "/api/auth/google"
+    signIn("google", { callbackUrl: "/" })
   }
 
   return (
