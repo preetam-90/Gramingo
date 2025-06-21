@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glassmorphism Helper */
+.glass-card {
+  @apply bg-glass backdrop-blur-xs shadow-lg rounded-xl border border-white/20;
+}
