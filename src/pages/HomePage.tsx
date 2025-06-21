@@ -1,9 +1,9 @@
-import React from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { useLocale } from '../contexts/LocaleContext';
-import { t } from '../i18n';
+import { useLocale } from '@/contexts/LocaleContext';
+import { t } from '@/i18n';
 
-const HomePage: React.FC = () => {
+const HomePage: FC = () => {
   const { locale } = useLocale();
 
   return (

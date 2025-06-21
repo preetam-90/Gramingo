@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { FC, useState } from 'react';
 
-const ContactPage: React.FC = () => {
+const ContactPage: FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');

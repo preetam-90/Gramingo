@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import { FC, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { listings } from '../data/listings';
-import { useLocale } from '../contexts/LocaleContext';
-import { t } from '../i18n';
+import { listings } from '@/data/listings';
+import { useLocale } from '@/contexts/LocaleContext';
+import { t } from '@/i18n';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { addBooking } from '../utils/bookings';
+import { addBooking } from '@/utils/bookings';
 
-const ListingDetailPage: React.FC = () => {
+const ListingDetailPage: FC = () => {
   const { id } = useParams();
   const listing = listings.find((l) => l.id === id);
   const { locale } = useLocale();

@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-const AboutPage: React.FC = () => (
+const AboutPage: FC = () => (
   <section className="container mx-auto px-4 py-12" id="about">
     <h2 className="text-3xl font-bold mb-6">About Gramin Go</h2>
     <p className="text-gray-700 leading-relaxed max-w-3xl">
