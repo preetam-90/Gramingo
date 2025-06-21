@@ -1,15 +1,15 @@
-import React from 'react';
+import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import { LocaleProvider } from './contexts/LocaleContext';
-import HomePage from './pages/HomePage';
-import ListingsPage from './pages/ListingsPage';
-import ListingDetailPage from './pages/ListingDetailPage';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { LocaleProvider } from '@/contexts/LocaleContext';
+import HomePage from '@/pages/HomePage';
+import ListingsPage from '@/pages/ListingsPage';
+import ListingDetailPage from '@/pages/ListingDetailPage';
+import AboutPage from '@/pages/AboutPage';
+import ContactPage from '@/pages/ContactPage';
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
     <LocaleProvider>
       <div className="min-h-screen flex flex-col pt-16 bg-background">

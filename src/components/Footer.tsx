@@ -1,8 +1,8 @@
-import React from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-const Footer: React.FC = () => (
+const Footer: FC = () => (
   <footer className="bg-glass backdrop-blur-md shadow-glass border-t border-white/20 text-sm">
     <div className="container mx-auto px-4 py-8 grid gap-8 md:grid-cols-3">
       <div>
