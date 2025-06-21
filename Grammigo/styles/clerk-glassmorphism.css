@@ -1,0 +1,137 @@
+/* Glassmorphism styling for Clerk account popup */
+
+/* Target the main modal/popup containers */
+.cl-modalContent,
+.cl-card,
+.cl-userProfile-root,
+.cl-userButtonPopoverCard,
+.cl-userButtonPopoverActionButton__signOut {
+  background: rgba(20, 83, 45, 0.25) !important; /* Slightly more green tint */
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(163, 200, 109, 0.3) !important; /* Light green border */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15) !important;
+  border-radius: 12px !important;
+}
+
+/* Inner cards and sections */
+.cl-profileSection,
+.cl-accordionContent,
+.cl-formFieldInput__phone {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 8px !important;
+}
+
+/* Style the buttons */
+.cl-formButtonPrimary,
+.cl-formButtonReset,
+.cl-userButtonPopoverActionButton {
+  background-color: rgba(163, 200, 109, 0.8) !important; /* Light green */
+  color: white !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+  border-radius: 6px !important;
+  text-transform: none !important;
+}
+
+.cl-formButtonPrimary:hover,
+.cl-formButtonReset:hover,
+.cl-userButtonPopoverActionButton:hover {
+  background-color: rgba(163, 200, 109, 1) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Hide Clerk branding */
+.cl-userButtonPopoverFooter,
+.cl-footer,
+.cl-footerAction,
+.cl-footerText,
+[class*="cl-internal-"][class*="footer"],
+[class*="badge"] {
+  display: none !important;
+}
+
+/* Style form inputs */
+.cl-formFieldInput,
+.cl-formFieldInputGroup {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 6px !important;
+}
+
+/* Add a subtle green border to the avatar */
+.cl-avatarBox,
+.cl-userButtonAvatarBox {
+  border: 2px solid rgba(163, 200, 109, 0.7) !important;
+  box-shadow: 0 0 15px rgba(163, 200, 109, 0.3) !important;
+}
+
+/* Style the modal backdrop */
+.cl-modalBackdrop {
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Style accordion elements */
+.cl-accordionTriggerButton {
+  background-color: rgba(163, 200, 109, 0.15) !important;
+  border-radius: 6px !important;
+}
+
+/* Style section titles */
+.cl-profileSectionTitle,
+.cl-profileSectionTitleText {
+  color: rgba(163, 200, 109, 1) !important;
+  font-weight: 600 !important;
+}
+
+/* Ensure text is readable */
+.cl-headerTitle,
+.cl-headerSubtitle,
+.cl-formFieldLabel,
+.cl-formFieldInput,
+.cl-accordionTriggerButton {
+  color: inherit !important;
+}
+
+/* Add subtle hover effects */
+.cl-userButtonPopoverActionButton,
+.cl-accordionTriggerButton {
+  transition: all 0.2s ease !important;
+}
+
+.cl-userButtonPopoverActionButton:hover,
+.cl-accordionTriggerButton:hover {
+  background-color: rgba(163, 200, 109, 0.25) !important;
+}
+
+/* Improve scrollbar styling */
+.cl-scrollBox::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.cl-scrollBox::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.cl-scrollBox::-webkit-scrollbar-thumb {
+  background: rgba(163, 200, 109, 0.5);
+  border-radius: 3px;
+}
+
+.cl-scrollBox::-webkit-scrollbar-thumb:hover {
+  background: rgba(163, 200, 109, 0.8);
+}
+
+/* Add a subtle green glow to focused elements */
+.cl-formFieldInput:focus,
+.cl-formFieldInputGroup:focus-within {
+  border-color: rgba(163, 200, 109, 0.8) !important;
+  box-shadow: 0 0 0 2px rgba(163, 200, 109, 0.2) !important;
+  outline: none !important;
+} 
