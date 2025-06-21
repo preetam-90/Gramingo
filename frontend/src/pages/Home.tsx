@@ -20,7 +20,7 @@ const Home: React.FC = () => {
           {t('welcome')}
         </h1>
         <p className="max-w-xl text-lg text-secondary">
-          Book tractors, harvesters, and more – delivered when you need them.
+          {t('tagline')}
         </p>
         <div className="w-full sm:w-auto">
           <SearchBar onSearch={handleSearch} />

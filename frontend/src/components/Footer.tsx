@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
             <i className="fab fa-instagram" />
           </a>
         </div>
-        <p className="text-sm text-secondary">© {new Date().getFullYear()} Gramin Go</p>
+        <p className="text-sm text-secondary">{t('copyright', { year: new Date().getFullYear() })}</p>
       </div>
     </footer>
   );

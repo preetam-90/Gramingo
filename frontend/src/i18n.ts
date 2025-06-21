@@ -30,6 +30,10 @@ const resources = {
       perDay: '/ day',
       about: 'About',
       contact: 'Contact',
+      tagline: 'Book tractors, harvesters, and more – delivered when you need them.',
+      aboutP1: 'Gramin Go is on a mission to empower farmers with convenient access to modern agricultural machinery. We bridge the gap between equipment owners and farmers who need them, ensuring timely availability and fair pricing.',
+      aboutP2: 'By digitising rural equipment rentals, we lower operational costs and put more power (literally) in the hands of farmers – boosting productivity and livelihood.',
+      copyright: '© {{year}} Gramin Go',
     },
   },
   hi: {
@@ -60,6 +64,10 @@ const resources = {
       perDay: '/ दिन',
       about: 'के बारे में',
       contact: 'संपर्क',
+      tagline: 'कृषि उपकरणों को बुक करें – ट्रैक्टर, हार्वेस्टर और बहुत कुछ, जब आपको ज़रूरत हो तब।',
+      aboutP1: 'ग्रामीण गो का मिशन किसानों को आधुनिक कृषि मशीनरी तक आसान पहुंच प्रदान करना है। हम उपकरण मालिकों और जिन किसानों को उनकी आवश्यकता होती है उनके बीच सेतु का कार्य करते हैं, समय पर उपलब्धता और उचित मूल्य सुनिश्चित करते हैं।',
+      aboutP2: 'ग्रामीण उपकरण किराये को डिजिटाइज़ कर हम संचालन लागत को कम करते हैं और किसानों के हाथों में अधिक शक्ति (शाब्दिक रूप से) देते हैं – जिससे उत्पादकता व आजीविका बढ़ती है।',
+      copyright: '© {{year}} ग्रामीण गो',
     },
   },
 };
