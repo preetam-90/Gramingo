@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom';
 import { listings } from '../data/listings';
 import { useLocale } from '../contexts/LocaleContext';
 import { t } from '../i18n';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import { addBooking } from '../utils/bookings';
 
 const ListingDetailPage: React.FC = () => {
   const { id } = useParams();
@@ -10,13 +13,15 @@ const ListingDetailPage: React.FC = () => {
   const { locale } = useLocale();
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
-  const [dates, setDates] = useState('');
+  const [date, setDate] = useState<Date | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
   if (!listing) return <p className="p-8">Listing not found.</p>;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!date) return;
+    addBooking({ listingId: listing.id, name, contact, date });
     setSubmitted(true);
   };
 
@@ -53,13 +58,14 @@ const ListingDetailPage: React.FC = () => {
                 required
                 className="bg-transparent border border-white/30 px-3 py-2 rounded-md backdrop-blur-sm"
               />
-              <input
-                type="date"
-                placeholder={t(locale, 'bookingDates')}
-                value={dates}
-                onChange={(e) => setDates(e.target.value)}
+              <DatePicker
+                selected={date}
+                onChange={(d) => setDate(d as Date)}
+                minDate={new Date()}
+                placeholderText={t(locale, 'bookingDates')}
+                className="bg-transparent border border-white/30 px-3 py-2 rounded-md backdrop-blur-sm w-full"
+                dateFormat="dd/MM/yyyy"
                 required
-                className="bg-transparent border border-white/30 px-3 py-2 rounded-md backdrop-blur-sm"
               />
               <button type="submit" className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark">
                 {t(locale, 'submit')}
