@@ -9,4 +9,4 @@ export async function GET() {
     googleOAuthConfigured: Boolean(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET),
     timestamp: new Date().toISOString(),
   })
-} 
+}
