@@ -16,6 +16,11 @@ const resources = {
       phone: 'Contact Number',
       bookingDates: 'Booking Dates',
       submit: 'Submit',
+      featured: 'Featured Equipment',
+      available: 'Available',
+      unavailable: 'Unavailable',
+      noResults: 'No results found.',
+      close: 'Close',
     },
   },
   hi: {
@@ -32,6 +37,11 @@ const resources = {
       phone: 'संपर्क नंबर',
       bookingDates: 'बुकिंग तिथियां',
       submit: 'सबमिट',
+      featured: 'विशेष उपकरण',
+      available: 'उपलब्ध',
+      unavailable: 'अनुपलब्ध',
+      noResults: 'कोई परिणाम नहीं मिला।',
+      close: 'बंद करें',
     },
   },
 };

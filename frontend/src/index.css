@@ -4,5 +4,23 @@
 
 /* Glassmorphism Helper */
 .glass-card {
-  @apply bg-glass backdrop-blur-xs shadow-lg rounded-xl border border-white/20;
+  @apply bg-surface backdrop-blur-sm shadow-glass rounded-xl border border-white/20;
+}
+
+/* Calendar Overrides */
+.react-calendar {
+  @apply bg-surface backdrop-blur-sm rounded-xl p-4 shadow-glass text-text-primary;
+}
+.react-calendar__tile {
+  @apply h-10 w-10 flex items-center justify-center rounded-lg hover:bg-primary-light/30 transition-colors;
+}
+.react-calendar__tile--active {
+  @apply bg-primary-light text-white;
+}
+.react-calendar__tile--rangeStart,
+.react-calendar__tile--rangeEnd {
+  @apply bg-primary text-white;
+}
+.react-calendar__navigation button {
+  @apply rounded-lg hover:bg-primary-light/30 p-2;
 }

@@ -71,7 +71,7 @@ const BookingModal: React.FC<Props> = ({ listing, onClose }) => {
             onClick={onClose}
             className="w-full rounded-lg border border-red-400 py-2 text-red-600 hover:bg-red-50"
           >
-            Close
+            {t('close')}
           </button>
         </form>
       </div>

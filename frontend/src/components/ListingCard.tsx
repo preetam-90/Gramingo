@@ -25,7 +25,7 @@ const ListingCard: React.FC<Props> = ({ item }) => {
             item.available ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
           }`}
         >
-          {item.available ? 'Available' : 'Unavailable'}
+          {item.available ? t('available') : t('unavailable')}
         </span>
         <button
           disabled={!item.available}

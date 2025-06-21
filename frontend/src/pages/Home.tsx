@@ -35,8 +35,8 @@ const Home: React.FC = () => {
 
       {/* Featured Listings */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Featured Equipment</h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <h2 className="text-2xl font-semibold">{t('featured')}</h2>
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {listings.slice(0, 3).map((item) => (
             <ListingCard key={item.id} item={item} />
           ))}
