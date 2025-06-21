@@ -1,0 +1,24 @@
+{
+  "buildCommand": "pnpm run build",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "outputDirectory": ".next",
+  "regions": ["iad1"],
+  "env": {
+    "NEXTAUTH_URL": {
+      "description": "URL of your Vercel deployment (e.g., https://your-app.vercel.app)"
+    },
+    "NEXTAUTH_SECRET": {
+      "description": "Secret used to encrypt the NextAuth.js JWT"
+    },
+    "DATABASE_URL": {
+      "description": "URL of your PostgreSQL database"
+    },
+    "GOOGLE_CLIENT_ID": {
+      "description": "Google OAuth Client ID"
+    },
+    "GOOGLE_CLIENT_SECRET": {
+      "description": "Google OAuth Client Secret"
+    }
+  }
+} 

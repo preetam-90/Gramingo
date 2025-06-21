@@ -32,3 +32,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# git author rewrite files
+git-author-rewrite.sh
+mailmap.txt
