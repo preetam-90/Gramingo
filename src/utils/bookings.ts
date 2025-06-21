@@ -1,4 +1,4 @@
-import { Booking } from '../types';
+import { Booking } from '@/types';
 
 const STORAGE_KEY = 'gramin-go-bookings';
 

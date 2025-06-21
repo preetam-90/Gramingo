@@ -1,4 +1,4 @@
-import { Listing } from '../types';
+import { Listing } from '@/types';
 
 export const listings: Listing[] = [
   {

@@ -1,9 +1,9 @@
-import React from 'react';
+import { FC } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { useLocale } from '../contexts/LocaleContext';
-import { t } from '../i18n';
+import { useLocale } from '@/contexts/LocaleContext';
+import { t } from '@/i18n';
 
-const Navbar: React.FC = () => {
+const Navbar: FC = () => {
   const { locale, setLocale } = useLocale();
 
   return (

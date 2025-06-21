@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { listings as data } from '../data/listings';
-import ListingCard from '../components/ListingCard';
-import { useLocale } from '../contexts/LocaleContext';
-import { t } from '../i18n';
+import { FC, useState } from 'react';
+import { listings as data } from '@/data/listings';
+import { ListingCard } from '@/components/ListingCard';
+import { useLocale } from '@/contexts/LocaleContext';
+import { t } from '@/i18n';
 
 const uniqueCategories = Array.from(new Set(data.map((l) => l.category)));
 const uniqueLocations = Array.from(new Set(data.map((l) => l.location)));
 
-const ListingsPage: React.FC = () => {
+const ListingsPage: FC = () => {
   const { locale } = useLocale();
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('All');

@@ -1,14 +1,14 @@
-import React from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { Listing } from '../data/listings';
-import { useLocale } from '../contexts/LocaleContext';
-import { t } from '../i18n';
+import type { Listing } from '@/types';
+import { useLocale } from '@/contexts/LocaleContext';
+import { t } from '@/i18n';
 
 interface Props {
   listing: Listing;
 }
 
-const ListingCard: React.FC<Props> = ({ listing }) => {
+export const ListingCard: FC<Props> = ({ listing }) => {
   const { locale } = useLocale();
 
   return (
@@ -35,5 +35,3 @@ const ListingCard: React.FC<Props> = ({ listing }) => {
     </div>
   );
 };
-
-export default ListingCard;

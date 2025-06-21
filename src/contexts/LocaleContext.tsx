@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
-import { Locale } from '../types';
+import { createContext, useContext, useState, FC, ReactNode } from 'react';
+import { Locale } from '@/types';
 
 interface LocaleContextProps {
   locale: Locale;
@@ -8,7 +8,9 @@ interface LocaleContextProps {
 
 const LocaleContext = createContext<LocaleContextProps | undefined>(undefined);
 
-export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface ProviderProps { children: ReactNode; }
+
+export const LocaleProvider: FC<ProviderProps> = ({ children }) => {
   const [locale, setLocale] = useState<Locale>('en');
   return (
     <LocaleContext.Provider value={{ locale, setLocale }}>
