@@ -9,7 +9,7 @@
 
 /* Calendar Overrides */
 .react-calendar {
-  @apply w-full bg-surface backdrop-blur-sm rounded-xl p-4 shadow-glass text-text-primary;
+  @apply w-full bg-surface backdrop-blur-md rounded-2xl p-6 shadow-glass-deep text-text-primary;
 }
 .react-calendar__tile {
   @apply h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg hover:bg-primary-light/30 transition-colors text-sm sm:text-base touch-manipulation;
@@ -22,7 +22,7 @@
   @apply bg-primary text-white;
 }
 .react-calendar__navigation button {
-  @apply rounded-lg hover:bg-primary-light/30 p-2;
+  @apply rounded-lg hover:bg-primary-light/30 p-3 sm:p-4;
 }
 .react-calendar__month-view {
   @apply gap-1 sm:gap-2;
