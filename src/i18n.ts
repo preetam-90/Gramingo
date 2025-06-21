@@ -1,0 +1,51 @@
+export type Locale = 'en' | 'hi';
+
+export const translations = {
+  en: {
+    heroTitle: 'Empowering Farmers with Easy Equipment Access',
+    heroSubtitle: 'Browse and book agricultural vehicles and equipment online',
+    getStarted: 'Get Started',
+    browse: 'Browse Listings',
+    searchPlaceholder: 'Search equipment...',
+    location: 'Location',
+    category: 'Category',
+    bookNow: 'Book Now',
+    available: 'Available',
+    notAvailable: 'Not Available',
+    pricePerHour: 'Price / hour',
+    pricePerDay: 'Price / day',
+    bookingFormTitle: 'Book this equipment',
+    name: 'Name',
+    contactNumber: 'Contact Number',
+    bookingDates: 'Booking Dates',
+    submit: 'Submit',
+    aboutUsTitle: 'About Gramin Go',
+    contactUs: 'Contact Us',
+    send: 'Send',
+  },
+  hi: {
+    heroTitle: 'किसानों को आसान उपकरण पहुँच',
+    heroSubtitle: 'कृषि वाहन और उपकरण ऑनलाइन ब्राउज़ और बुक करें',
+    getStarted: 'शुरू करें',
+    browse: 'लिस्टिंग देखें',
+    searchPlaceholder: 'उपकरण खोजें...',
+    location: 'स्थान',
+    category: 'श्रेणी',
+    bookNow: 'अभी बुक करें',
+    available: 'उपलब्ध',
+    notAvailable: 'अनुपलब्ध',
+    pricePerHour: '가격 / घंटे',
+    pricePerDay: '가격 / दिन',
+    bookingFormTitle: 'इस उपकरण को बुक करें',
+    name: 'नाम',
+    contactNumber: 'संपर्क नंबर',
+    bookingDates: 'बुकिंग तिथि',
+    submit: 'सबमिट',
+    aboutUsTitle: 'ग्रामीण गो के बारे में',
+    contactUs: 'संपर्क करें',
+    send: 'भेजें',
+  },
+};
+
+export const t = (locale: Locale, key: keyof typeof translations['en']) =>
+  translations[locale][key] || translations.en[key];
